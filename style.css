@@ -2,7 +2,7 @@
  :root {
     --textprim: #e0e0e0;
     --textsec: #aaaaaa;
-    --heading-color: #66ccff; /* NEU: helle Überschriftenfarbe */
+    --heading-color: #66ccff;
   }
 
   body {
@@ -12,7 +12,7 @@
   }
 
   h1, h2, h3 {
-    color: var(--heading-color); /* NEU: Überschriften einfärben */
+    color: var(--heading-color);
     font-weight: bold;
   }
 </style>
