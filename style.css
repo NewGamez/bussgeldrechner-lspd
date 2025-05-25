@@ -1,14 +1,21 @@
 
-:root {
-  --textprim: #ffffff;
-  --textsec: #cccccc;
-  --background: #121212;
-}
+ :root {
+    --textprim: #e0e0e0;
+    --textsec: #aaaaaa;
+    --heading-color: #66ccff; /* NEU: helle Überschriftenfarbe */
+  }
 
-body {
-  background-color: var(--background);
-  color: var(--textprim);
-}
+  body {
+    background-color: #121212;
+    color: var(--textprim);
+    font-family: sans-serif;
+  }
+
+  h1, h2, h3 {
+    color: var(--heading-color); /* NEU: Überschriften einfärben */
+    font-weight: bold;
+  }
+</style>
 
 * {
     font-family: 'Consolas', 'Courier New', monospace;
