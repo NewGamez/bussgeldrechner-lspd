@@ -11,10 +11,6 @@
     font-family: sans-serif;
   }
 
-  h1, h2, h3 {
-    color: var(--heading-color);
-    font-weight: bold;
-  }
 </style>
 
 * {
