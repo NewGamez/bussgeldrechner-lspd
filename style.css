@@ -10,13 +10,14 @@
 }
 
 body {
-  background-color: var(--background);
-  background-image: url('https://ik.imagekit.io/r9dmkdu0a/image-removebg-preview%20(2).png?updatedAt=1747595136162');
+  background-color: #d3d3d3; /* hellgrau */
+  background-image: url('lspd-logo.png'); /* Bildname anpassen, falls nötig */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 300px auto;
+  background-size: 300px auto; /* Logo skalieren */
+  background-attachment: fixed;
   background-blend-mode: lighten;
-  color: var(--textprim);
+  color: #222; /* dunkelgrauer Text */
   font-family: Arial, sans-serif;
 }
 
