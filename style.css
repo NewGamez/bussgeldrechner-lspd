@@ -11,7 +11,7 @@
 
 body {
   background-color: #f2f2f2; /* sehr helles Grau */
-  background-image: url('lspd-logo.png'); /* Logo muss im gleichen Verzeichnis liegen */
+  background-image: url('lspd-logo.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 300px auto;
