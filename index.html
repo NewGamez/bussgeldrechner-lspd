@@ -12,30 +12,25 @@
 
   <!-- Hier ist dein Style korrekt eingebunden -->
   <style>
-    :root {
-      --textprim: #222222;
-      --textsecond: #666666;
-      --button: #87CEEB;
-      --accent: #87CEEB;
-      --buttonhover: #5DADE2;
-      --background: #d3d3d3;
-      --inputs: #e0e0e0;
-    }
+   :root {
+  --textprim: #e0e0e0;
+  --textsecond: #aaaaaa;
+  --button: #333333;
+  --accent: #666666;
+  --buttonhover: #555555;
+  --background: #121212;
+  --inputs: #1e1e1e;
+}
 
-    body {
-      background-color: #f2f2f2;
-      background-image: url('lspd-logo.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 300px auto;
-      background-attachment: fixed;
-      background-blend-mode: lighten;
-
-      color: #000000;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  background-color: var(--background);
+  /* Hintergrundbild entfernen */
+  background-image: none;
+  color: var(--textprim);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
   </style>
 </head>
 
