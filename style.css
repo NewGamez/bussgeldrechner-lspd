@@ -1,12 +1,23 @@
 
 :root {
-  --textprim: #00ffff;
-  --textsecond: #66ffff;
-  --button: #003344;
-  --accent: #00bfff;
-  --buttonhover: #3399cc;
-  --background: #001820;
-  --inputs: #002b40;
+  --textprim: #222222;       /* dunkles Schwarz/Grau für Haupttext */
+  --textsecond: #666666;     /* mittleres Grau für Sekundärtext */
+  --button: #87CEEB;         /* Himmelblau für Buttons */
+  --accent: #87CEEB;         /* Himmelblau als Akzentfarbe */
+  --buttonhover: #5DADE2;    /* etwas dunkleres Himmelblau beim Hover */
+  --background: #d3d3d3;     /* helles Grau als Hintergrundfarbe */
+  --inputs: #e0e0e0;         /* hellgraue Eingabefelder */
+}
+
+body {
+  background-color: var(--background);
+  background-image: url('https://ik.imagekit.io/r9dmkdu0a/image-removebg-preview%20(2).png?updatedAt=1747595136162');  /* Pfad zu deinem LSPD-Logo */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 300px auto;  /* Größe anpassen */
+  background-blend-mode: lighten; /* Damit das Logo dezent im Hintergrund ist */
+  color: var(--textprim);
+  font-family: Arial, sans-serif;
 }
 
 
