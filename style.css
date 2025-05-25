@@ -1,12 +1,8 @@
 
 :root {
-  --textprim: #222222;
-  --textsecond: #666666;
-  --button: #87CEEB;
-  --accent: #87CEEB;
-  --buttonhover: #5DADE2;
-  --background: #d3d3d3;
-  --inputs: #e0e0e0;
+  --textprim: #ffffff;
+  --textsec: #cccccc;
+  --background: #121212;
 }
 
 body {
