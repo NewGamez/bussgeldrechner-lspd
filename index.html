@@ -2,72 +2,21 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bußgeldrechner</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    .offense {
-      margin: 10px 0;
-    }
-    #total {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      color: darkred;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <h1>Bußgeldrechner</h1>
-
-  <div class="offense">
-    <input type="checkbox" id="geschwindigkeit" data-amount="100">
-    <label for="geschwindigkeit">Geschwindigkeitsüberschreitung (100€)</label>
+  <div class="container">
+    <h1>Bußgeldrechner</h1>
+    <ul>
+      <li><input type="checkbox" id="speeding" data-amount="5000"><label for="speeding">Geschwindigkeitsüberschreitung 10-20 km/h</label></li>
+      <li><input type="checkbox" id="mobile" data-amount="3000"><label for="mobile">Handy am Steuer</label></li>
+      <li><input type="checkbox" id="redlight" data-amount="20000"><label for="redlight">Rotlichtverstoß</label></li>
+      <!-- Weitere Verstöße hier hinzufügen -->
+    </ul>
+    <div id="total">Gesamt: 0 €</div>
   </div>
-
-  <div class="offense">
-    <input type="checkbox" id="handy" data-amount="150">
-    <label for="handy">Handy am Steuer (150€)</label>
-  </div>
-
-  <div class="offense">
-    <input type="checkbox" id="rotlicht" data-amount="200">
-    <label for="rotlicht">Rotlichtverstoß (200€)</label>
-  </div>
-
-  <div class="offense">
-    <input type="checkbox" id="gurt" data-amount="30">
-    <label for="gurt">Kein Sicherheitsgurt (30€)</label>
-  </div>
-
-  <div class="offense">
-    <input type="checkbox" id="alkohol" data-amount="500">
-    <label for="alkohol">Alkohol am Steuer (500€)</label>
-  </div>
-
-  <div id="total">Gesamt: 0 €</div>
-
-  <script>
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const totalDisplay = document.getElementById('total');
-
-    function updateTotal() {
-      let total = 0;
-      checkboxes.forEach(cb => {
-        if (cb.checked) {
-          total += parseInt(cb.getAttribute('data-amount'));
-        }
-      });
-      totalDisplay.textContent = `Gesamt: ${total} €`;
-    }
-
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', updateTotal);
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
