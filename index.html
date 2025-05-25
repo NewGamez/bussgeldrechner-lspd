@@ -2,21 +2,54 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bußgeldrechner</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Bußgeldrechner</h1>
-    <ul>
-      <li><input type="checkbox" id="speeding" data-amount="5000"><label for="speeding">Geschwindigkeitsüberschreitung 10-20 km/h</label></li>
-      <li><input type="checkbox" id="mobile" data-amount="3000"><label for="mobile">Handy am Steuer</label></li>
-      <li><input type="checkbox" id="redlight" data-amount="20000"><label for="redlight">Rotlichtverstoß</label></li>
-      <!-- Weitere Verstöße hier hinzufügen -->
-    </ul>
+    <p class="info">Wähle die begangenen Verkehrsverstöße aus:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Verstoß</th>
+          <th>Bußgeld (€)</th>
+          <th>Auswahl</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Geschwindigkeitsüberschreitung (10-20 km/h)</td>
+          <td>30</td>
+          <td><input type="checkbox" data-amount="30"></td>
+        </tr>
+        <tr>
+          <td>Handy am Steuer</td>
+          <td>100</td>
+          <td><input type="checkbox" data-amount="100"></td>
+        </tr>
+        <tr>
+          <td>Rotlichtverstoß</td>
+          <td>200</td>
+          <td><input type="checkbox" data-amount="200"></td>
+        </tr>
+        <tr>
+          <td>Kein Sicherheitsgurt</td>
+          <td>30</td>
+          <td><input type="checkbox" data-amount="30"></td>
+        </tr>
+        <tr>
+          <td>Alkohol am Steuer</td>
+          <td>500</td>
+          <td><input type="checkbox" data-amount="500"></td>
+        </tr>
+      </tbody>
+    </table>
+
     <div id="total">Gesamt: 0 €</div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
