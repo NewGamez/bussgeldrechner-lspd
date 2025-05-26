@@ -388,56 +388,20 @@ body {
     -webkit-appearance: none;
 }
 
-[type="checkbox"] {
-  display: none;
-}
-
 [type="checkbox"] + label {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: 'Consolas', 'Courier New', monospace;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--textprim);
-  padding-left: 50px;
-  line-height: 1.4;
-}
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
 
-/* Der "Schalter" */
-[type="checkbox"] + label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 40px;
-  height: 20px;
-  background-color: #444;
-  border-radius: 10px;
-  transition: background-color 0.2s ease-in-out;
-}
+    color: white;
+    font-weight: 600;
 
-/* Der Punkt im Schalter */
-[type="checkbox"] + label::after {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  width: 16px;
-  height: 16px;
-  background-color: #ff4d4d;
-  border-radius: 50%;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Wenn angeklickt (aktiv) */
-[type="checkbox"]:checked + label::before {
-  background-color: #2ecc71; /* grün */
-}
-
-[type="checkbox"]:checked + label::after {
-  transform: translateX(20px);
-  background-color: #0f0;
+    
+    padding-left: 50px;
+    position: relative;
+    margin-top: -20px;
 }
 
 #checkboxfont1 {
@@ -590,16 +554,26 @@ body {
 }
 
 select {
-  font-size: 16px;             /* Größere Schrift für bessere Lesbarkeit */
-  padding: 10px 12px;          /* Ausreichend Innenabstand */
-  min-width: 250px;            /* Breitere Box für längere Texte */
-  height: 45px;                /* Höhere Dropdown-Box */
-  background-color: #2a2a2a;   /* Dunkler Hintergrund passend zum Theme */
-  color: #e0e0e0;              /* Helle Schriftfarbe für Kontrast */
-  border: 1px solid #555;      /* Dezente Umrandung */
-  border-radius: 6px;          /* Leicht abgerundete Ecken */
-  font-family: 'Consolas', 'Courier New', monospace; /* Monospace-Schrift für Terminal-Look */
+
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    width: 70%;
+    height: 3vh;
+
+    margin-top: 1vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    text-indent: 5px;
 }
+
 
 
 #finesListContainer {
