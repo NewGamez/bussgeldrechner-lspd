@@ -590,26 +590,16 @@ body {
 }
 
 select {
-
-    background-color: var(--inputs);
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5vh;
-
-    width: 70%;
-    height: 3vh;
-
-    margin-top: 1vh;
-
-    tab-size: 0px;
-    outline: none;
-    box-sizing: border-box;
-    font-weight: 500;
-    color: white;
-
-    text-indent: 5px;
+  font-size: 16px;             /* Größere Schrift für bessere Lesbarkeit */
+  padding: 10px 12px;          /* Ausreichend Innenabstand */
+  min-width: 250px;            /* Breitere Box für längere Texte */
+  height: 45px;                /* Höhere Dropdown-Box */
+  background-color: #2a2a2a;   /* Dunkler Hintergrund passend zum Theme */
+  color: #e0e0e0;              /* Helle Schriftfarbe für Kontrast */
+  border: 1px solid #555;      /* Dezente Umrandung */
+  border-radius: 6px;          /* Leicht abgerundete Ecken */
+  font-family: 'Consolas', 'Courier New', monospace; /* Monospace-Schrift für Terminal-Look */
 }
-
 
 
 #finesListContainer {
