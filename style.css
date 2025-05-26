@@ -388,20 +388,56 @@ body {
     -webkit-appearance: none;
 }
 
+[type="checkbox"] {
+  display: none;
+}
+
 [type="checkbox"] + label {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    font-family: sans-serif;
-    font-size: 16px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--textprim);
+  padding-left: 50px;
+  line-height: 1.4;
+}
 
-    color: white;
-    font-weight: 600;
+/* Der "Schalter" */
+[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  background-color: #444;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
 
-    
-    padding-left: 50px;
-    position: relative;
-    margin-top: -20px;
+/* Der Punkt im Schalter */
+[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Wenn angeklickt (aktiv) */
+[type="checkbox"]:checked + label::before {
+  background-color: #2ecc71; /* grün */
+}
+
+[type="checkbox"]:checked + label::after {
+  transform: translateX(20px);
+  background-color: #0f0;
 }
 
 #checkboxfont1 {
