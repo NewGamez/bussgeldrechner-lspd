@@ -706,26 +706,14 @@
 
             <div id="checkbox">
                 <input id="checkbox_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
-                <label style="line-height: 25px;" for="checkbox_box">Kurzer Grund</label>
+                <label style="line-height: 25px;" for="checkbox_box">Verkürzt</label>
             </div>
 
             <div id="plateInput"><input id="plateInput_input" type="text" maxlength="8" placeholder="Kennzeichen" oninput="JavaScript:startCalculating()"></div>
             <div id="blitzerInput"><input id="blitzerInput_input" type="text" maxlength="64" placeholder="Blitzerort" oninput="JavaScript:startCalculating()"></div>
             <div id="systemwantedsInput"><input id="systemwantedsInput_input" type="text" maxlength="1" placeholder="Systemwanteds" oninput="JavaScript:startCalculating()"></div>
-            
-            <div id="übergabeInput">
-                <select name="" id="übergabeInput_select" onchange="JavaScript:startCalculating()">
-                    <option value="none">TV-Abtransport auswählen</option>
-                    <option value="lspd">Los Santos Police Department</option>
-                    <option value="sahp">San Andreas Highway Patrol</option>
-                    <option value="ng">National Guard</option>
-                    <option value="usss">United States Secret Service</option>
-                    <option value="fib">Federal Investigation Bureau</option>
-                </select>
-                <input id="übergabeInput_input" type="text" oninput="JavaScript:startCalculating()" placeholder="TV-Abtransport Beauftrager" maxlength="64">
-            </div>
 
-            <div id="notepadArea"><textarea id="notepadArea_input" name="" placeholder="Schreibe deine Notizen hier rein..." id="" rows="3"></textarea></div>
+            <div id="notepadArea"><textarea id="notepadArea_input" name="" placeholder="Notizen ..." id="" rows="3"></textarea></div>
 
             <div id="reue">
                 <input id="reue_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
@@ -738,8 +726,6 @@
             </div>
 
             <button id="showButton" onclick="JavaScript:showFines()">Bußgelder anzeigen</button>
-
-            <button id="showAttorneysButton" onclick="JavaScript:showAttorneys()">Anwaltsregister anzeigen</button>
 
             <button id="resetButton" onclick="JavaScript:resetButton()">Zurücksetzen</button>
         </div>
