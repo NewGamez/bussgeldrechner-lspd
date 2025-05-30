@@ -15,18 +15,13 @@ function searchFine() {
 }
 
 function selectFine(event) {
-    let element = event.target
-    if (element.tagName == "FONT") return
-    if (element.tagName == "TD") element = element.parentElement
-    if (element.tagName == "I") element = element.parentElement.parentElement
+    let element = event.target;
+    if (element.tagName == "FONT") return;
+    if (element.tagName == "TD") element = element.parentElement;
+    if (element.tagName == "I") element = element.parentElement.parentElement;
 
-    if (element.classList.contains("selected")) {
-        element.classList.remove("selected")
-    } else {
-        element.classList.add("selected")
-    }
-
-    startCalculating()
+    element.classList.toggle("selected");
+    startCalculating();  // Das bleibt
 }
 
 function startCalculating() {
@@ -61,13 +56,68 @@ function startCalculating() {
     let shortMode = false
     if (document.getElementById("checkbox_box").checked) shortMode = true
 
-    let fineCollection = document.querySelectorAll(".selected")
-    let fineCollectionWantedAmount = []
-    let fineCollectionFineAmount = []
+let fineCollection = document.querySelectorAll(".selected");
+let fineCollectionWantedAmount = [];
+let fineCollectionFineAmount = [];
 
-    for (var i = 0; i < fineCollection.length; i++) { 
+for (var i = 0; i < fineCollection.length; i++) {
+    let cache_wanted_amount = 0;
+    cache_wanted_amount += parseInt(fineCollection[i].querySelector(".wantedAmount").getAttribute("data-wantedamount"));
+    cache_wanted_amount += fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted").length;
+    if (cache_wanted_amount > 5) cache_wanted_amount = 5;
 
+    fineCollectionWantedAmount.push(cache_wanted_amount);
 
+    let cache_fine_amount = 0;
+    cache_fine_amount += parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount"));
+
+    let extrawanteds_found = fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted");
+    let extrafines_amount = 0;
+    for (let b = 0; b < extrawanteds_found.length; b++) {
+        if (extrawanteds_found[b].getAttribute("data-addedfine")) {
+            cache_fine_amount += parseInt(extrawanteds_found[b].getAttribute("data-addedfine"));
+            extrafines_amount += parseInt(extrawanteds_found[b].getAttribute("data-addedfine"));
+        }
+    }
+
+    fineCollectionFineAmount.push(cache_fine_amount);
+}
+
+// 🟡 HIER kommt jetzt der neue Block zur Ergebnis-Tabelle:
+
+const finesBody = document.getElementById('selected-fines-body');
+if (finesBody) {
+    finesBody.innerHTML = '';
+}
+
+let totalFine = 0;
+let totalPoints = 0;
+
+fineCollection.forEach(row => {
+    const paragraph = row.querySelector('.paragraph')?.textContent || '';
+    const description = row.querySelector('.fineText')?.textContent || '';
+    const fineAmount = parseInt(row.querySelector('.fineAmount')?.dataset.fineamount || '0');
+    const points = parseInt(row.querySelector('.wantedAmount')?.dataset.wantedamount || '0');
+
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+        <td>${paragraph}</td>
+        <td>${description}</td>
+        <td>${points}</td>
+        <td>$${fineAmount.toLocaleString()}</td>
+    `;
+    finesBody.appendChild(newRow);
+
+    totalFine += fineAmount;
+    totalPoints += points;
+});
+
+const totalFineEl = document.getElementById('total-fine');
+if (totalFineEl) totalFineEl.textContent = `Gesamt: $${totalFine.toLocaleString()}`;
+
+const totalPointsEl = document.getElementById('total-points');
+if (totalPointsEl) totalPointsEl.textContent = `Punkte: ${totalPoints}`;
+}
 
         let cache_wanted_amount = 0;
 
