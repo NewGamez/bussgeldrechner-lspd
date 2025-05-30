@@ -30,26 +30,42 @@
 </head>
 <body>
 
+<div id="header">
+    <div id="title">Rechner des LSPD</div>
+    <div id="credits">Edited by Benni</div>
+    <div id="searchbar">
+        <input id="searchbar_input" oninput="JavaScript:searchFine()" type="text" placeholder="Nach einer Straftat suchen">
     </div>
-    <div id="header">
-        <div id="title">Rechner des LSPD</div>
-        <div id="credits">Edited by Benni</div>
-        <div id="searchbar"><input id="searchbar_input" oninput="JavaScript:searchFine()" type="text" placeholder="Nach einer Straftat suchen"></div>
-    </div>
+</div>
 
-    <div id="contentbox">
-        <div id="fineslist">
-            <table>
-                <tr id="finesHeader">
+<div id="contentbox">
+    <div id="fineslist">
+        <table>
+            <tr id="finesHeader">
                 <th style="width: 15%;">Paragraph</th>
                 <th style="width: 45%;">Straftat</th>
                 <th style="width: 10%;">Punkte</th>
                 <th style="width: 15%;">Bußgeld</th>
-                </tr>
-                <tr class="categoryHeader">
-                    <th></th>
-                    <th>Straßenverkehrsordnung (StVO)</th>
-                </tr>
+            </tr>
+
+            <!-- Hier kommt deine Kategorie-Überschrift -->
+            <tr class="categoryHeader">
+                <th></th>
+                <th>Straßenverkehrsordnung (StVO)</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tbody id="selected-fines-body">
+                <!-- Dynamisch eingefügte Zeilen -->
+            </tbody>
+        </table>
+
+        <!-- Gesamtwerte unter der Tabelle -->
+        <p id="total-fine">Gesamt: $0</p>
+        <p id="total-points">Punkte: 0</p>
+    </div>
+</div>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="true" data-removeweaponlicence="false">
                     <td class="paragraph">StVO §2</td>
                     <td class="fineText">Gefährdung anderer Verkehrsteilnehmer</td>
