@@ -866,3 +866,40 @@ button:hover {
 }
 
 
+details.category {
+  background-color: #666;  /* Hellgrau */
+  border-radius: 30px;
+  margin: 20px auto;
+  padding: 0;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border: none;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+details.category[open] summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+details.category summary {
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  list-style: none;
+  user-select: none;
+}
+
+details.category summary::-webkit-details-marker {
+  display: none;
+}
+
+details.category .content {
+  padding: 20px;
+  background-color: #444;
+  color: white;
+  font-size: 0.95rem;
+}
