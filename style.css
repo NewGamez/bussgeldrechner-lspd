@@ -903,3 +903,22 @@ details.category .content {
   color: white;
   font-size: 0.95rem;
 }
+
+details.category summary {
+    background-color: #888888; /* Grauer Hintergrund */
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px 30px;
+    margin: 10px auto;
+    border-radius: 40px;
+    width: 80%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+details.category summary:hover {
+    background-color: #777777; /* Etwas dunkler beim Hover */
+}
