@@ -22,11 +22,6 @@
   color: var(--textprim);
   font-family: 'Share Tech Mono', monospace;
   user-select: none;
-
-  background-image: url('background.png'); /* Bildname anpassen */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 </style>
